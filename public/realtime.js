@@ -1,4 +1,4 @@
-const socket = io.connect(`${window.location.href}`);
+const socket = io.connect('https://anonnychat.herokuapp.com');
 
 const sender = document.querySelector('#sender');
 const message = document.querySelector('#message');
