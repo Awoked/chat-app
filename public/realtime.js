@@ -1,6 +1,6 @@
 const socket = io.connect('https://anonnychat.herokuapp.com');
-
-const sender = document.querySelector('#sender');
+// const socket = io.connect(window.location.href);
+let sender;
 const message = document.querySelector('#message');
 const submitBtn = document.querySelector('#submitButton');
 const output = document.querySelector('#output');
@@ -14,5 +14,30 @@ submitBtn.addEventListener('click', () =>{
 });
 
 socket.on('chat', data =>{
-    output.innerHTML += `<div class="message">${data.sender} : ${data.message}</div> `;
+    output.innerHTML += `
+    <div class="message">
+        <b>${data.sender} :</b> ${data.message}
+    </div> `;
+});
+
+$('.loginButton').click(function () {
+    $('#login-wrapper').hide();
+    sender = document.querySelector('#sender');
+    $('#chat').addClass('active');
+});
+
+
+
+
+$('.hamburger-menu button').click(function () {
+    $('.hamburger-menu').toggleClass('active');
+    $('.header-mobile-menu').toggleClass('active');
+});
+
+$('.nav-link').click(function () {
+    $(this).siblings().toggleClass('active');
+    $(this).children().toggleClass('active');
+})
+$('.lang a').click(function () {
+   $(this).siblings('ul').toggleClass('active'); 
 });

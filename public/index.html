@@ -5,28 +5,121 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <header>
-            <h2>Demo</h2>
+        <header class="header">
+            <div class="header-container">
+                <div class="logo">
+                    <a href="#">    
+                        <img src="images/794ea3f69f3436ba5b803c35f9b2bc25.png" alt="">
+                    </a>
+                </div>
+                <nav class="navbar-wrapper">
+                    <ul class="navbar">
+                        <li class="nav-item">
+                            <a href="https://github.com/Awoked" class="nav-link">Github <i class="fa-brands fa-github"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="extras-wrapper">
+                    <div class="process">
+                        <div>
+                            <ul class="lang">
+                                <li>
+                                    <a href="#"><i class="fa fa-earth"></i></a>
+                                    <ul>
+                                        <li><a href="#">TR</a></li>
+                                        <li><a href="#">EN</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="#"><i class="fa fa-search"></i></a>
+                        </div>
+                    </div>
+                    <div class="social">
+                        <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hamburger-menu">
+                    <button class="hamburger-button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            <div class="header-mobile-menu">
+                <div class="mobile-search">
+                    <label for="mobile-search">
+                        <a href="#"><i class="fa fa-search"></i></a>
+                        <input type="text" placeholder="Ara" id="mobile-search" name="mobile-search">
+                    </label>
+                </div>
+                <ul class="navbar">
+                    <li class="nav-item">
+                        <a href="https://github.com/Awoked" class="nav-link">Github <i class="fa-brands fa-github"></i></a>
+                    </li>
+                </ul>
+                <div class="mobile-bottom-wrapper">
+                    <div class="mobile-lang">
+                        <ul class="lang">
+                            <li>
+                                <a href="#"><i class="fa fa-earth"></i></a>
+                                <ul>
+                                    <li><a href="#">TR</a></li>
+                                    <li><a href="#">EN</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mobile-social">
+                        <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
         </header>
         <div class="container">
             <div id="chat-wrapper">
-            
-                <main id="chat">
+                <div id="login-wrapper">
+                    <div class="login">    
+                        <input type="text" id="sender" placeholder="Kullanıcı Adı">
+                        <button class="loginButton">Giriş Yap</button>
+                    </div>
+                </div>
+                <main id="chat" class="">
                     <div class="chat-window">
                         <div id="output"></div>
                         <div id="feedback"></div>
                     </div>
                     <div id="sender-wrapper">
-                        <input type="text" id="sender">
-                        <input type="text" id="message">
-                        <button id="submitButton">Gönder</button>
+                        <input type="text" id="message" placeholder="Mesaj">
+                        <button id="submitButton"><i class="fa-solid fa-arrow-right"></i></button>
                     </div>
                 </main>
             </div>
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.3/socket.io.js" integrity="sha512-iWPnCISAd/J+ZacwV2mbNLCaPGRrRo5OS81lKTVPtRg1wGTC20Cfmp5Us5RcbLv42QLdbAWl0MI57yox5VecQg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="realtime.js"></script>
     </body>
