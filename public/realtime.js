@@ -11,6 +11,7 @@ submitBtn.addEventListener('click', () =>{
         message: message.value,
         sender: sender.value
     });
+    message.value = '';
 });
 
 socket.on('chat', data =>{
